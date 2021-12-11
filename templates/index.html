@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Analysis</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+	<style type="text/css">
+		body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 900% 900%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient { 
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<section id="content">
+		<form action="" method="POST">
+			<div class="head"><h1>Your information</h1></div>
+			<table class="slidecontainer">
+				<tr>
+					<td>
+						<label id="stickers1">Fever:</label>
+		  				<input type="range" min="96" max="106" value="96" class="slider" id="myRange" name="fever">
+	  				</td>
+	  				<td>
+	  					<p>Value: <span id="demo"></span></p>
+	  				</td>
+	  			</tr>
+			</table>
+			<table>
+				<tr>
+					<td id="portion">
+						<label id="stickers2">Cough:</label>
+						<input type="radio" name="cough" class="crange" value="1" id="cough_yes" /><label for="cough_yes">Yes</label>
+						<input type="radio" name="cough" class="crange" value="0" id="cough_no" /><label for="cough_no" style="margin-right: 50px;">No</label>
+					</td>
+					<td id="portion">
+						<label id="stickers3">Fatigue:</label>
+						<input type="radio" name="fatigue" class="fatigue" value="1" id="fatigue_yes" /><label for="fatigue_yes">Yes</label>
+						<input type="radio" name="fatigue" class="fatigue" value="0" id="fatigue_no" /><label for="fatigue_no">No</label>
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td id="portion">
+						<label id="stickers4">Loss of smell or taste:</label>
+						<input type="radio" name="loss_smell_taste" class="loss_smell_taste" value="1" id="loss_smell_taste_yes" /><label for="loss_smell_taste_yes">Yes</label>
+						<input type="radio" name="loss_smell_taste" class="loss_smell_taste" value="0" id="loss_smell_taste_no" /><label for="loss_smell_taste_no" style="margin-right: 48px;">No</label>
+					</td>
+					<td id="portion">
+						<label id="stickers5">Nassal Congestion:</label>
+						<input type="radio" name="nassal_congestion" class="nassal_congestion" value="1" id="nassal_congestion_yes" /><label for="nassal_congestion_yes">Yes</label>
+						<input type="radio" name="nassal_congestion" class="nassal_congestion" value="0" id="nassal_congestion_no" /><label for="nassal_congestion_no">No</label>
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td id="portion">
+						<label id="stickers6">Red Eyes:</label>
+						<input type="radio" name="red_eyes" class="red_eyes" value="1" id="red_eyes_yes" /><label for="red_eyes_yes">Yes</label>
+						<input type="radio" name="red_eyes" class="red_eyes" value="0" id="red_eyes_no" /><label for="red_eyes_no" style="margin-right: 48px;">No</label>
+					</td>
+					<td id="portion">
+						<label id="stickers7">Sore throat:</label>
+						<input type="radio" name="sore_throat" class="sore_throat" value="1" id="sore_throat_yes" /><label for="sore_throat_yes">Yes</label>
+						<input type="radio" name="sore_throat" class="sore_throat" value="0" id="sore_throat_no" /><label for="sore_throat_no">No</label>
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td id="portion">
+						<label id="stickers8">Headache:</label>
+						<input type="radio" name="headache" class="headache" value="1" id="headache_yes" /><label for="headache_yes">Yes</label>
+						<input type="radio" name="headache" class="headache" value="0" id="headache_no" /><label for="headache_no" style="margin-right: 46px;">No</label>
+					</td>		
+					<td id="portion">
+						<label id="stickers9">Muscle Pain:</label>
+						<input type="radio" name="muscle_pain" class="muscle_pain" value="1" id="muscle_pain_yes" /><label for="muscle_pain_yes">Yes</label>
+						<input type="radio" name="muscle_pain" class="muscle_pain" value="0" id="muscle_pain_no" /><label for="muscle_pain_no">No</label>
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td id="portion">
+						<label id="stickers10">Vomiting:</label>
+						<input type="radio" name="vomiting" class="vomiting" value="1" id="vomiting_yes" /><label for="vomiting_yes">Yes</label>
+						<input type="radio" name="vomiting" class="vomiting" value="0" id="vomiting_no" /><label for="vomiting_no" style="margin-right: 46px;">No</label>
+						
+					</td>
+					
+					<td id="portion">
+						<label id="stickers11">Skin Rash:</label>
+						<input type="radio" name="skin_rash" class="skin_rash" value="1" id="skin_rash_yes" /><label for="skin_rash_yes">Yes</label>
+						<input type="radio" name="skin_rash" class="skin_rash" value="0" id="skin_rash_no" /><label for="skin_rash_no" >No</label><br>
+					</td>
+				</tr><tr><td>
+						<label id="info" style="margin-left: 48px;">(if more than 2-3 times a day then say yes)</label>
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td id="portion">
+						<label id="stickers12">Breathing Issue:</label>
+						<input type="radio" name="breathing_issue" class="breathing_issue" value="1" id="breathing_issue_yes" /><label for="breathing_issue_yes">Yes</label>
+						<input type="radio" name="breathing_issue" class="breathing_issue" value="0" id="breathing_issue_no" /><label for="breathing_issue_no" style="margin-right: 46px;">No</label>
+						
+					</td>
+					<td id="portion">
+						<label id="stickers13">Diarrhea:</label>
+						<input type="radio" name="diarrhea" class="diarrhea" value="1" id="diarrhea_yes" /><label for="diarrhea_yes">Yes</label>
+						<input type="radio" name="diarrhea" class="diarrhea" value="0" id="diarrhea_no" /><label for="diarrhea_no" >No</label><br>
+					</td>
+				</tr>
+				<tr><td>
+				<label id="info" style="margin-left: 50px;">(If more than 2 a day then say yes)</label></td></tr>
+			</table>
+			<table>
+				<tr>
+					<td id="portion">
+						<label id="stickers14">Loss Apetite:</label>
+						<input type="radio" name="loss_apetite" class="loss_apetite" value="1" id="loss_apetite_yes" /><label for="loss_apetite_yes">Yes</label>
+						<input type="radio" name="loss_apetite" class="loss_apetite" value="0" id="loss_apetite_no" /><label for="loss_apetite_no" style="margin-right: 50px;">No</label>
+					</td>				
+					<td id="portion">
+						<label id="stickers15">Chest Pain:</label>
+						<input type="radio" name="chest_pain" class="chest_pain" value="1" id="chest_pain_yes" /><label for="chest_pain_yes">Yes</label>
+						<input type="radio" name="chest_pain" class="chest_pain" value="0" id="chest_pain_no" /><label for="chest_pain_no">No</label>
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td>
+					<label id="stickers16">Age:</label></td>
+					<td><input type="text" name="age" class="age" required="" id="age" /></td>
+				</tr>
+			</table>
+			
+			<div>
+				<input type="submit" id="predict" value="Predict" />
+				
+			</div>
+		</form><!-- form -->
+		
+		
+	</section><!-- content -->
+</div><!-- container -->
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+var slider1 = document.getElementById("myRange1");
+var output1 = document.getElementById("demo1");
+output1.innerHTML = slider1.value;
+
+slider1.oninput = function() {
+  output1.innerHTML = this.value;
+}
+</script>
+</body>
+</html>

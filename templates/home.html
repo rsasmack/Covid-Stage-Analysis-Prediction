@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<style type="text/css">
+		body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 900% 900%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient { 
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+	</style>
+</head>
+<body>
+
+<iframe src="/static/COVID-19 Audio Clip 2.mp3" height="0" width="0" frameborder="0"></iframe>
+	<div>
+		<marquee height="20%">
+			<img src="/static/giphy.gif" width="10%" style="margin-right: 20%;">
+			<img src="/static/giphy.gif" width="10%" style="margin-right: 20%;">
+			<img src="/static/giphy.gif" width="10%" style="margin-right: 20%;">
+			<img src="/static/giphy.gif" width="10%">
+		</marquee>
+	</div><br>
+	<div class="text">
+		<p>The threat is the corona virus not the people</p>
+		<p class="text2">Lets fight back together by getting vaccinated</p>
+	</div>
+	<div class="images">
+		<div class="slider">
+			<div class="slides">
+				<input type="radio" name="radio-btn" id="radio1">
+				<input type="radio" name="radio-btn" id="radio2">
+				<input type="radio" name="radio-btn" id="radio3">
+				<input type="radio" name="radio-btn" id="radio4">
+				
+				<input type="submit" name="button" id="btn1" value="lets check">
+				
+				<div class="slide first">
+					<img src="/static/images/3.jpg" class="img1">
+				</div>
+				
+				<div class="slide">
+					<img src="/static/images/5.jpg" class="img2">
+				</div>
+				<div class="slide">
+					<img src="/static/images/6.jpg" class="img3">
+				</div>
+				<div class="slide">
+					<img src="/static/images/7.jpg" class="img4">
+				</div>
+				<div class="text3"><p>Do you know about yourself?</p></div>
+				<div class="next-page"><a href="index.html"><button class="btn1" >Lets check</button></a></div>
+				
+				
+				<div class="navigation-auto">
+					<div class="auto-btn1"></div>
+					<div class="auto-btn2"></div>
+					<div class="auto-btn3"></div>
+					<div class="auto-btn4"></div>
+					
+				</div>
+
+			</div>
+			<div class="navigation-manual">
+				
+				<label for="radio1" class="manual-btn"></label>
+				<label for="radio2" class="manual-btn"></label>
+				<label for="radio3" class="manual-btn"></label>
+				<label for="radio4" class="manual-btn"></label>
+				
+			</div>
+		</div>
+		<marquee direction="right" width="20%">
+			<br><br><br><br><br><br><br><br><br><br><br>
+			<img src="/static/giphy (2).gif" width="50%">
+		</marquee>
+	</div>
+	<div>
+		<marquee height="20%" direction="right">
+			<img src="/static/e.gif" width="10%" style="margin-right: 20%;">
+			<img src="/static/e.gif" width="10%" style="margin-right: 20%;">
+			<img src="/static/e.gif" width="10%" style="margin-right: 20%;">
+			<img src="/static/e.gif" width="10%">
+		</marquee>
+	</div><br>
+	<script type="text/javascript">
+		var counter=1;
+		setInterval(function () {
+			document.getElementById('radio' + counter).checked=true;
+			counter++;
+			if(counter>4){
+				counter=1;
+			}
+		},5000);
+	</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+</body>
+</html>
